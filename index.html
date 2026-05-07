@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="weather-app">
+    <section class="weather-header">
+      <div>
+        <h1>Weather App</h1>
+        <p>Live current conditions using the free Open-Meteo API. Search for any city and the page will update the temperature and wind speed.</p>
+        <form class="search-form" id="search-form">
+          <input id="city-input" type="text" placeholder="Enter city name, e.g. London" aria-label="City name" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div>
+        <p id="location">Peshawar, PK</p>
+      </div>
+    </section>
+
+    <section class="weather-card">
+      <div class="temperature">
+        <span id="temperature">--</span>
+        <span>°C</span>
+      </div>
+
+      <div class="details">
+        <div class="detail-item">
+          <h2>Wind speed</h2>
+          <p id="wind-speed">-- km/h</p>
+        </div>
+        <div class="detail-item">
+          <h2>Weather state</h2>
+          <p id="weather-code">Loading...</p>
+        </div>
+      </div>
+
+      <p class="status" id="status">Fetching current weather…</p>
+    </section>
+  </main>
+
+  <script src="script.js"> </script>
+</body>
+</html>
